@@ -1,0 +1,886 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+input {
+  border: none;
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+.Home {
+  background: url("./bake3.jpeg") no-repeat center center;
+  background-size: cover;
+  justify-content: flex-start;
+}
+.navbar {
+  transition: all 0.6s ease;
+  position: fixed;
+  z-index: 10;
+  background-color: #eb585800;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navshadow {
+  transition: all 0.6s ease;
+  background-color:white;
+}
+.burger {
+  z-index: 2;
+  display: none;
+}
+.line1,
+.line2,
+.line3 {
+  margin: 5px;
+  height: 3px;
+  width: 30px;
+  background-color: #e8b75b;
+}
+.logo img {
+  margin: 0 0 0 0;
+  height: 8vh;
+  width: 80px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.nav-links {
+  width: 610px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(245, 222, 179, 0);
+}
+.nav-links li a {
+  letter-spacing: 2px;
+  color: #737270;
+  font: bold 18px "Itim", cursive;
+}
+.coollink::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background:#e8b75b ;
+  transition: width 0.4s;
+}
+.coollink:hover::after {
+  width: 100%;
+  transition: width 0.4s;
+}
+
+.icons-div {
+  width: 60px;
+  height: 250px;
+  margin: 50px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.icons i {
+  color: #737270;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  transition: all 0.3s ease-in-out;
+}
+.icons:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 2px 2px #dadada;
+  background-color: #e8b75bbb;
+  transition: 0.3s ease-in-out;
+}
+.homecontents {
+  margin: 0 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 450px;
+  height: 400px;
+}
+.homecontents h1 {
+  letter-spacing: 3px;
+  font: bold 40px "Handlee", sans-serif;
+  color: #e8b75b;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+#servicesbtn {
+  letter-spacing: 2px;
+  width: 160px;
+  margin: 40px 0 0 10px;
+  background-color: #e8b75b;
+  font: bold 21px "Itim", cursive;
+  padding: 10px 0;
+  color: #737270;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+#servicesbtn:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 3px 3px #d6d5d5;
+  color: white;
+}
+.About {
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.774),
+      rgba(255, 255, 255, 0.774)
+    ),
+    url("./abt.jpeg");
+  background-size: cover;
+}
+.Aboutcontent {
+  height: 450px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.abt-para {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100px 0 0 100px;
+  height: 450px;
+  width: 550px;
+  background-color: #e8b75b;
+}
+.abt-para h1 {
+  color: white;
+  margin: 70px 0 0 75px;
+  align-self: baseline;
+  font: bold 40px "Handlee", sans-serif;
+}
+.abt-para p {
+  margin: 30px 0 0 75px;
+  align-self: baseline;
+  font-family: "Itim", cursive;
+  color: #737270;
+  max-width: 400px;
+}
+.abt-button {
+  width: 120px;
+  padding: 8px;
+  margin: 60px 0 0 75px;
+  align-self: baseline;
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Itim", cursive;
+  transition: all 0.5s ease;
+}
+.abt-button:hover {
+  background-color: white;
+  color: #e8b75b;
+  transition: all 0.5s ease;
+}
+.abt-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  border-radius: 0 100px 100px 0;
+  border-right: 2px solid #737270;
+  border-top: 2px solid #737270;
+  border-bottom: 2px solid #737270;
+  width: 420px;
+}
+.abt-img img {
+  height: 350px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 0px 100px 100px 0;
+  margin: 0 0 0 -37px;
+}
+.Service {
+  flex-direction: column;
+}
+.menus h1,
+.splorders h1 {
+  font: bold 30px "Handlee", sans-serif;
+  margin: 50px 0 0 0;
+  color: #e8b75b;
+  letter-spacing: 2px;
+}
+.menus,
+.splorders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.menus {
+  height: 35vh;
+  background-color: #ffffff;
+}
+.menulist {
+  margin: 35px 0 0 0;
+  width: 90vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menulisticons {
+  width: 70px;
+  height: 70px;
+}
+.splorders {
+  background-color: #fbfaf5;
+  height: 65vh;
+}
+.splorders h1 {
+  margin: 0 0 0 0;
+}
+.listofitems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 345px;
+  margin: 35px 0 0 0;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 250px;
+  background-color: #fdfcfa;
+  height: 300px;
+  box-shadow: 5px 5px 5px 5px #dadada;
+  border-radius: 50px;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #737270;
+  position: relative;
+  overflow: hidden;
+}
+.box img {
+  width: 140px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 70px;
+}
+.productname {
+  font: 2rem "Itim";
+  text-align: center;
+}
+.subtext {
+  color: #e8b75b;
+  font: 15px "itim";
+  margin: 20px 30px 30px 30px;
+  max-width: 180px;
+  text-align: center;
+}
+.arr_container,
+.arr_container1,
+.arr_container2,
+.cancel,
+.cancel1,
+.cancel2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #737370;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  border-radius: 50px 0 50px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.cancel,
+.cancel1,
+.cancel2 {
+  background: white;
+  color: #e8b75b;
+}
+.arr_container i,
+.arr_container1 i,
+.arr_container2 i {
+  transform: rotate(45deg);
+}
+.active_arr {
+  transform: translate(80%, 80%);
+}
+.left_container,
+.left_container1,
+.left_container2 {
+  position: absolute;
+  background-color: #e8b75b;
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
+  padding: 40px 0 0 20px;
+  transition: all 0.4s;
+}
+.off {
+  transform: translate(-100%, -100%) rotate(90deg);
+}
+.active {
+  transform: translate(0) rotate(0);
+}
+.left_container p,
+.left_container1 p,
+.left_container2 p {
+  max-width: 200px;
+  text-align: left;
+  font: 0.9rem "itim";
+  margin: 0 10px 0 0;
+  color: white;
+}
+.left_container .flavours div,
+.left_container1 .flavours div,
+.left_container2 .flavours div {
+  display: inline-block;
+  color: #737370;
+  border: 1px solid #737370;
+  padding: 5px 5px;
+  font: 0.9rem "itim";
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+}
+.left_container .flavours div:hover,
+.left_container1 .flavours div:hover,
+.left_container2 .flavours div:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(250, 250, 250);
+}
+.Testimonial {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+}
+.Testimonial h1 {
+  margin: 80px 0 0 0;
+  font: bold 30px "Handlee";
+  color: #e8b75b;
+}
+.Testimonial h2 {
+  font: 1.5rem "Itim";
+}
+.testimonialcontainer {
+  width: 95%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.testimonial {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 400px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #737370;
+  border-radius: 50px;
+  padding: 2rem;
+  margin: 0 1.5rem;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.testimonial::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#e8b75b, #e8b75b),
+    linear-gradient(#737370, #737370), linear-gradient(#e8b75b, #e8b75b),
+    linear-gradient(#737370, #737370);
+  animation: rotate 4s linear infinite;
+}
+.testimonial::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 50px;
+}
+
+.avatar {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.testimonialuser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  margin: 110px 0px 0 0;
+  text-align: center;
+}
+.user__name {
+  font: bold 1.1rem "Handlee";
+}
+.user__org {
+  color: #e8b75b;
+  font: bold 1.2rem "Itim";
+  letter-spacing: 0.03rem;
+}
+.testimonial_text {
+  margin: 10px 0 0 0;
+  text-align: center;
+  font: 1rem "Itim";
+}
+#readmore {
+  color: #e8b75b;
+  margin: 10px 0 0 27px;
+  font-family: "Handlee";
+  width: 110px;
+}
+#readmore:hover {
+  color: #737270;
+}
+.Testimonial h2 {
+  color: #737270;
+}
+
+.Contact {
+  height: 75vh;
+  justify-content: flex-start;
+  background: url("./bisc.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Contact form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 380px;
+  width: 400px;
+  margin: 50px 0 0 60px;
+  border-radius: 50px;
+  background-color: #e6d0b8e0;
+  font: bold 1rem "Itim";
+}
+.forms h3 {
+  margin: 8px 0 0 8px;
+  letter-spacing: 1px;
+  color: #737270;
+  font-family: "Handlee";
+}
+.name,
+.mail,
+.number,
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contactform {
+  height: 330px;
+  border-radius: 0 0 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.contactform input {
+  border-radius: 23px;
+  border: none;
+  height: 35px;
+  width: 160px;
+  outline: none;
+}
+.contactform input,
+.contactform textarea {
+  font-size: medium;
+  background-color: #ffffffd2;
+  font-family: "Itim";
+  padding: 10px;
+  margin: 0 20px 10px 20px;
+}
+.message textarea {
+  width: 360px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  height: 80px;
+  overflow: auto;
+  resize: none;
+}
+.name label,
+.mail label,
+.number label,
+.message label {
+  margin: 0 0 8px 30px;
+  font: bold 1rem "Itim";
+  letter-spacing: 1px;
+  color: #737270;
+}
+form button {
+  height: 30px;
+  width: 120px;
+  border-radius: 20px;
+  margin: 10px 0 10px 130px;
+  background-color: #2b2a28;
+  color: white;
+  font-family: "Itim";
+}
+
+footer {
+  height: 25vh;
+  width: 100vw;
+  background-color: #ffff;
+  display: flex;
+  justify-content: space-around;
+}
+footer div {
+  height: 25vh;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mid img {
+  height: 20vh;
+  width: 250px;
+  object-fit: cover;
+}
+.address p {
+  margin: 4px 0 4px 0;
+  font: 1rem "itim";
+  align-self: flex-start;
+  color: #e8b75b;
+  text-align: left;
+}
+.last {
+  font: bold 1rem "Itim";
+  color: #e8b75b;
+  letter-spacing: 1px;
+}
+.fooiconsdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+}
+.fooicon {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: #737270;
+  transition: all 0.4s ease;
+}
+.fooicon i {
+  color: white;
+}
+.fooicon:hover {
+  background-color: #e8b75b;
+  transform: scale(1.2);
+  transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: block;
+  }
+  .nav-links {
+    margin: 92vh 0 0 0;
+    position: fixed;
+    background-color: #e8b75b;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 100% -25%);
+    -webkit-clip-path: circle(100px at 100% -25%);
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+  }
+  .nav-links li a {
+    color: white;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 8%;
+    top: 24%;
+    cursor: pointer;
+    z-index: 2;
+    margin-left: 50px;
+  }
+  .burger div {
+    transition: all 0.5s ease;
+  }
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #e8b75b;
+    margin: 5px;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    transition: 0.5s ease-out;
+    pointer-events: all;
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    transition: all 0.5s ease;
+    background-color: white;
+  }
+  .toggle .line2 {
+    transform: translateX(400%);
+    transition: all 0.5s ease;
+    background-color: white;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: all 0.5s ease;
+    background-color: white;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 1s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  .Home {
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    background: url("./mob.jpeg");
+    background-size: cover;
+  }
+  .homecontents {
+    margin: 50px 0 0 0;
+    order: 1;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .homecontents h1 {
+    text-align: center;
+    margin: 0 0 0 0;
+    justify-self: normal;
+    align-self: center;
+  }
+  #servicesbtn:hover {
+    box-shadow: none;
+    color: white;
+  }
+  .icons-div {
+    justify-self: baseline;
+    flex-direction: row;
+    width: 200px;
+    height: 100px;
+    order: 2;
+  }
+  .icons i {
+    color: #e8b75b;
+  }
+  .icons:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+  }
+  .abt-img {
+    display: none;
+  }
+  .abt-para {
+    height: 60vh;
+    width: 80vw;
+    border-radius: 40px;
+    justify-content: space-around;
+  }
+  .abt-para h1,
+  .abt-para p,
+  .abt-para button {
+    margin: 20px 0 0 10px;
+  }
+  .Service {
+    justify-content: space-around;
+    height: 200vh;
+  }
+  .menus {
+    height: 45vh;
+    justify-content: space-around;
+  }
+  .menus h1 {
+    margin: 0px 0 0 0;
+  }
+  .menulist {
+    margin: 0 0px 20px 0;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 250px;
+  }
+  .splorders {
+    height: 155vh;
+  }
+  .listofitems {
+    flex-direction: column;
+    height: 140vh;
+  }
+  .Testimonial {
+    height: 200vh;
+  }
+  .testimonialcontainer {
+    height: 175vh;
+    flex-direction: column;
+  }
+  .Testimonial h2 {
+    font: 1.3rem "Itim";
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+  .Contact {
+    height: 100vh;
+    align-items: center;
+  }
+  .Contact form {
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 95vw;
+    height: 460px;
+  }
+  .contactform button {
+    margin: 0 auto;
+  }
+  .Contact input {
+    margin: 0 0 0 20px;
+    width: 40vw;
+  }
+  .contactform {
+    height: 400px;
+    width: 95vw;
+  }
+  .mail {
+    margin: 0 10px 0 0px;
+  }
+  .message textarea {
+    margin: 0 0 0 10px;
+    width: 90vw;
+  }
+  footer {
+    justify-content: center;
+    align-items: center;
+    height: 43vh;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .address {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .address {
+    margin: 0 auto;
+    width: 1000vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .address p {
+    font-size: 1rem;
+    max-width: 3900px;
+    text-align: center;
+  }
+  .mid img {
+    width: 200px;
+    height: 20vh;
+  }
+  .fooiconsdiv {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
